@@ -1826,3 +1826,26 @@ form label {
     transform-origin: center top;
   }
 }
+/* Keep the clock on ONE line on small phones by scaling the whole widget */
+@media (max-width: 480px) {
+  /* Make sure the container never wraps the clock to a new line */
+  .flipTimebox {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;   /* prevent wrapping */
+    width: 100%;
+    overflow: hidden;                /* avoid tiny horizontal scrollbars */
+  }
+
+  /* Target the exact wrapper FlipClock renders */
+  #fh5co-header .flipTimebox .flip-clock-wrapper,
+  .flipTimebox .flip-clock-wrapper {
+    transform: scale(0.78) !important;    /* tweak 0.70–0.85 to taste */
+    transform-origin: center top !important;
+    float: none !important;
+    margin: 0 auto !important;
+    display: inline-block !important;
+    white-space: nowrap !important;       /* hard stop against line breaks */
+  }
+}
