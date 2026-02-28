@@ -1815,3 +1815,14 @@ form label {
 .clock {
     text-align: center;
 }
+
+/* Make the clock fit one line on small screens by scaling it down */
+@media (max-width: 480px) {
+  .flipTimebox {          /* your outer container */
+    justify-content: center;
+  }
+  .flip-clock-wrapper {   /* FlipClock root */
+    transform: scale(0.78);      /* tweak 0.70–0.90 until it fits one line */
+    transform-origin: center top;
+  }
+}
