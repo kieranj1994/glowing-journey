@@ -1849,3 +1849,12 @@ form label {
     white-space: nowrap !important;       /* hard stop against line breaks */
   }
 }
+
+/* Add spacing under section titles */
+.key-list {
+  margin-top: 20px !important; 
+}
+
+.fh5co-heading h2 {
+  margin-bottom: 30px !important;
+}
