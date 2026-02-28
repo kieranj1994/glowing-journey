@@ -1805,31 +1805,3 @@ form label {
 
 /*# sourceMappingURL=style.css.map */
 
-/* ---- Fix countdown clock being pushed to the right ---- */
-.flipTimebox, 
-.clock, 
-.clock-fix {
-  margin: 0 auto !important;
-  display: block !important;
-  text-align: center !important;
-}
-
-/* Fix FlipClock digits overflowing on mobile */
-.clock .flip-clock-wrapper {
-  margin: 0 auto !important;
-  width: auto !important;
-}
-
-/* Remove float from FlipClock */
-.flip-clock-wrapper {
-  float: none !important;
-  display: inline-block !important;
-}
-
-/* Ensure the clock stays centered on mobile */
-@media (max-width: 480px) {
-  .flip-clock-wrapper {
-    transform: scale(0.85);   /* Optional: shrink slightly if too wide */
-    transform-origin: center top;
-  }
-}
