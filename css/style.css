@@ -1825,3 +1825,10 @@ form label {
     height: 520px !important;   /* was 600px; tweak if you want more/less crop */
   }
 }
+/* --- Show full bg.jpg without zooming or cropping --- */
+#fh5co-header.fh5co-cover {
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center top !important;  /* adjust if needed */
+  background-color: #ffffff; /* change if your background is not white */
+}
