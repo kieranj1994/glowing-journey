@@ -1804,31 +1804,3 @@ form label {
 }
 
 /*# sourceMappingURL=style.css.map */
-
-/* --- Fix bg.jpg alignment in the header (works across devices) --- */
-#fh5co-header.fh5co-cover {
-  background-position: center top !important;  /* try 'center center' if your focal point is in the middle */
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
-}
-
-/* On small screens, disable parallax-like tricks and enforce the focal point */
-@media (max-width: 768px) {
-  #fh5co-header.fh5co-cover {
-    background-attachment: scroll !important;   /* avoids jitter/offset on some mobiles */
-    background-position: center top !important; /* adjust to taste: center top / center center / center 30% */
-  }
-
-  /* Make the hero shorter on phones so the visible part of bg.jpg is more predictable */
-  #fh5co-header .display-t,
-  #fh5co-header .display-tc {
-    height: 520px !important;   /* was 600px; tweak if you want more/less crop */
-  }
-}
-/* --- Show full bg.jpg without zooming or cropping --- */
-#fh5co-header.fh5co-cover {
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center top !important;  /* adjust if needed */
-  background-color: #ffffff; /* change if your background is not white */
-}
