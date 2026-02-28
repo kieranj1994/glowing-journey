@@ -1858,3 +1858,10 @@ form label {
 .fh5co-heading h2 {
   margin-bottom: 30px !important;
 }
+
+/* Remove bullet points from the Details list */
+.key-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
