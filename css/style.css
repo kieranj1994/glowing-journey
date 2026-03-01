@@ -1897,3 +1897,21 @@ form label {
 }
 
 
+/* Light pink text inside the Google Maps info box */
+#fh5co-event .event-wrap h3,
+#fh5co-event .event-wrap span,
+#fh5co-event .event-wrap i {
+    color: #f7b6d3 !important; /* your matching light pink */
+}
+
+
+#fh5co-event .event-wrap {
+    border: 2px solid #f7b6d3 !important;
+}
+
+
+#fh5co-event .event-wrap h3 {
+    border-bottom: 1px solid #f7b6d3 !important;
+}
+
+
