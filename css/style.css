@@ -1865,3 +1865,27 @@ form label {
   padding: 0;
   margin: 0;
 }
+
+/* Mobile-friendly framing for the header background */
+#fh5co-header.fh5co-cover {
+  background-repeat: no-repeat !important;
+  background-size: cover !important;            /* fill the area */
+  background-position: center top !important;   /* focal point; tune below */
+}
+
+/* Tweak the focal point on small screens */
+@media (max-width: 768px) {
+  #fh5co-header.fh5co-cover {
+    /* Try one of these depending on your photo:
+       center center   (subject in the middle)
+       center 25%      (subject in upper third)
+       center 35%      (slightly lower) */
+    background-position: center 25% !important;
+  }
+
+  /* Optional: reduce hero height so less of the image gets cropped */
+  #fh5co-header .display-t,
+  #fh5co-header .display-tc {
+    height: 520px !important;  /* was 600px in your CSS; adjust to taste */
+  }
+}
