@@ -1866,16 +1866,27 @@ form label {
   margin: 0;
 }
 
-
-
-/* HEADER IMAGE + FADE INTO WHITE */
+/* Mobile-friendly framing for the header background */
 #fh5co-header.fh5co-cover {
-  background-image: 
-    linear-gradient(to bottom, rgba(255,255,255,0) 60%, #ffffff 100%),
-    url("images/bg.jpg");
-  background-size: cover, cover;
-  background-position: center top, center top;
-  background-repeat: no-repeat, no-repeat;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;            /* fill the area */
+  background-position: center top !important;   /* focal point; tune below */
 }
 
+/* Tweak the focal point on small screens */
+@media (max-width: 768px) {
+  #fh5co-header.fh5co-cover {
+    /* Try one of these depending on your photo:
+       center center   (subject in the middle)
+       center 25%      (subject in upper third)
+       center 35%      (slightly lower) */
+    background-position: center 25% !important;
+  }
+
+  /* Optional: reduce hero height so less of the image gets cropped */
+  #fh5co-header .display-t,
+  #fh5co-header .display-tc {
+    height: 520px !important;  /* was 600px in your CSS; adjust to taste */
+  }
+}
 
