@@ -1897,12 +1897,18 @@ form label {
 }
 
 
-/* Light pink text inside the Google Maps info box */
-#fh5co-event .event-wrap h3,
+
+/* Keep ONLY the venue title pink */
+#fh5co-event .event-wrap h3 {
+  color: #C79E9A !important;
+}
+
+/* Make date/time and icons grey */
 #fh5co-event .event-wrap span,
 #fh5co-event .event-wrap i {
-    color: #C79E9A !important; /* your matching light pink */
+  color: #828282 !important;  /* same grey as your body text */
 }
+
 
 
 #fh5co-event .event-wrap {
