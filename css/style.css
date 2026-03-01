@@ -1867,13 +1867,15 @@ form label {
 }
 
 
-/* Header background + bottom fade into white */
+
+/* HEADER IMAGE + FADE INTO WHITE */
 #fh5co-header.fh5co-cover {
-  background-image:
+  background-image: 
     linear-gradient(to bottom, rgba(255,255,255,0) 60%, #ffffff 100%),
     url("images/bg.jpg");
   background-size: cover, cover;
   background-position: center top, center top;
   background-repeat: no-repeat, no-repeat;
 }
+
 
