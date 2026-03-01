@@ -1889,3 +1889,15 @@ form label {
     height: 520px !important;  /* was 600px in your CSS; adjust to taste */
   }
 }
+
+
+/* Header background + bottom fade into white */
+#fh5co-header.fh5co-cover {
+  background-image:
+    linear-gradient(to bottom, rgba(255,255,255,0) 60%, #ffffff 100%),
+    url("images/bg.jpg");
+  background-size: cover, cover;
+  background-position: center top, center top;
+  background-repeat: no-repeat, no-repeat;
+}
+
