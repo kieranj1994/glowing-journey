@@ -2039,3 +2039,24 @@ html { scroll-behavior: smooth; }
 /* 8) FlipClock: keep the consolidated mobile block (already in your CSS) */
 /* (No change here; your current rules are fine.) */
 
+/* Fix section titles sitting too high */
+#fh5co-gallery,
+#fh5co-Location,
+#fh5co-Details,
+#fh5co-Accommodation,
+#fh5co-Gifts,
+#fh5co-RSVP {
+  padding-top: 6em !important;   /* increase top spacing */
+}
+
+@media (max-width: 768px) {
+  #fh5co-gallery,
+  #fh5co-Location,
+  #fh5co-Details,
+  #fh5co-Accommodation,
+  #fh5co-Gifts,
+  #fh5co-RSVP {
+    padding-top: 4.5em !important;   /* slightly smaller on mobile */
+  }
+}
+
