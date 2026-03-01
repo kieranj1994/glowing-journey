@@ -1919,5 +1919,123 @@ form label {
 #fh5co-event .event-wrap h3 {
     border-bottom: 1px solid #828282 !important;
 }
+/* =======================================================
+   PATCH for new section IDs + spacing + anchor scroll
+   Paste this at the VERY BOTTOM of style.css
+   ======================================================= */
 
+/* 0) Smooth scrolling (optional but nice) */
+html { scroll-behavior: smooth; }
+
+/* 1) Fix broken selectors that used &gt; earlier */
+.fh5co-nav ul li.active > a { color: #fff !important; }
+.fh5co-cover > .fh5co-container { position: relative; z-index: 10; }
+.fh5co-nav-toggle.fh5co-nav-white > i { color: #fff; background: #fff; }
+.fh5co-nav-toggle.fh5co-nav-white > i::before,
+.fh5co-nav-toggle.fh5co-nav-white > i::after { background: #fff; }
+#fh5co-offcanvas ul li > ul { padding-left: 20px; display: none; }
+#fh5co-offcanvas ul li.offcanvas-has-dropdown > a { display: block; position: relative; }
+
+/* Timeline selector fixes */
+.timeline > li { margin-bottom: 20px; position: relative; }
+.timeline > li:before, .timeline > li:after { content: " "; display: table; }
+.timeline > li:after { clear: both; }
+.timeline > li > .timeline-panel { width: 40%; float: left; border: 1px solid #d4d4d4; padding: 30px; position: relative; border-radius: 4px; }
+.timeline > li > .timeline-panel:before {
+  position: absolute; top: 80px; right: -15px; display: inline-block;
+  border-top: 15px solid transparent; border-left: 15px solid #ccc;
+  border-right: 0 solid #ccc; border-bottom: 15px solid transparent; content: " ";
+}
+.timeline > li > .timeline-panel:after {
+  position: absolute; top: 81px; right: -14px; display: inline-block;
+  border-top: 14px solid transparent; border-left: 14px solid #fff;
+  border-right: 0 solid #fff; border-bottom: 14px solid transparent; content: " ";
+}
+.timeline > li > .timeline-badge {
+  background-size: cover; background-position: top center; background-repeat: no-repeat;
+  position: absolute; color: #fff; width: 160px; height: 160px; top: 16px; left: 50%;
+  margin-left: -80px; background-color: #999; z-index: 100; border-radius: 50%;
+}
+.timeline > li.timeline-inverted > .timeline-panel { float: right; }
+.timeline > li.timeline-inverted > .timeline-panel:before { border-left-width: 0; border-right-width: 15px; left: -15px; right: auto; }
+.timeline > li.timeline-inverted > .timeline-panel:after { border-left-width: 0; border-right-width: 14px; left: -14px; right: auto; }
+.timeline-body > p, .timeline-body > ul { margin-bottom: 0; }
+.timeline-body > p + p { margin-top: 5px; }
+
+/* 2) Anchor offset so nav links don’t tuck under header */
+#fh5co-gallery,
+#fh5co-Location,
+#fh5co-Details,
+#fh5co-Accommodation,
+#fh5co-Gifts,
+#fh5co-RSVP {
+  scroll-margin-top: 90px; /* adjust (70–120px) if needed */
+}
+
+/* 3) NEW IDs: make Location behave like the old #fh5co-event (but with better spacing) */
+
+/* Let sections size naturally (prevents overlap) */
+#fh5co-Location { height: auto; float: left; }
+/* Preserve table layout but no forced heights */
+#fh5co-Location .display-t,
+#fh5co-Location .display-tc { height: auto; display: table; width: 100%; }
+
+/* Match overlay style that #fh5co-event had */
+#fh5co-Location .overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.04); pointer-events: none; }
+
+/* Event box styling inside Location */
+#fh5co-Location .event-wrap {
+  border: 2px solid #828282;
+  padding: 30px;
+  width: 100%;
+  float: left;
+  border-radius: 4px;
+}
+@media screen and (max-width: 768px) {
+  #fh5co-Location .event-wrap { margin-bottom: 10px; }
+}
+
+/* Title (venue) pink with grey underline */
+#fh5co-Location .event-wrap h3 {
+  font-family: Sofia Sans Condensed;
+  font-size: 25px;
+  color: #C79E9A;                /* pink title */
+  border-bottom: 1px solid #828282; /* grey underline */
+  display: block;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Date/time + icons in grey */
+#fh5co-Location .event-wrap span,
+#fh5co-Location .event-wrap i {
+  color: #828282;
+  font-size: 20px;
+}
+
+/* Two-column layout for the small event rows */
+#fh5co-Location .event-wrap .event-col {
+  width: 50%;
+  float: left;
+  margin-bottom: 30px;
+}
+
+/* 4) NEW IDs: Details (inherits general section spacing already) */
+/* If you need Details-specific tweaks, add them here. For now, the inherited
+   .fh5co-section / .fh5co-section-gray spacing and typography are sufficient. */
+
+/* 5) Keep section titles pink (already present, ensure it wins) */
+.fh5co-heading h2 { color: #C79E9A !important; }
+
+/* 6) Make overlays click-through where sensible */
+#fh5co-header .overlay,
+#fh5co-Location .overlay { pointer-events: none; }
+
+/* 7) Mobile polish previously added for header (keep height flexible if you like) */
+/* If you see big gaps, you can let the hero auto-size by removing any fixed heights.
+   You already have a media rule setting 520px; that’s fine to keep. */
+
+/* 8) FlipClock: keep the consolidated mobile block (already in your CSS) */
+/* (No change here; your current rules are fine.) */
 
