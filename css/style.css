@@ -2059,4 +2059,14 @@ html { scroll-behavior: smooth; }
     padding-top: 4.5em !important;   /* slightly smaller on mobile */
   }
 }
+/* Extra spacing fix ONLY for the Details section */
+#fh5co-Details {
+  padding-top: 7em !important;   /* larger space above Details */
+  clear: both !important;        /* forces it to start below floated content */
+}
 
+@media (max-width: 768px) {
+  #fh5co-Details {
+    padding-top: 5em !important;
+  }
+}
